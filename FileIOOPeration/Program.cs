@@ -12,7 +12,7 @@ namespace FileIOOperation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader\n 7. Write Using StreamWriter\n 8. Binary Serialization\n 9. Binary De Serialization");
+                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader\n 7. Write Using StreamWriter\n 8. Binary Serialization\n 9. Binary De Serialization\n 10. JSON Serialization\n 11. Json Deserialization");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -44,6 +44,12 @@ namespace FileIOOperation
                         break;
                    case 9:
                         BinarySerialization.DeSerialization();
+                        break;
+                    case 10:
+                        JSONSerialization.JsonSerialization();
+                        break;
+                    case 11:
+                        JSONSerialization.JsonDeserialization();
                         break;
                     default:
                         flag = false;
