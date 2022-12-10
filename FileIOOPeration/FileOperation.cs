@@ -38,5 +38,10 @@ namespace FileIOOperation
             string destinationFilePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Copy.txt";
             File.Copy(filePath, destinationFilePath, true);
         }
+        public static void DeleteFile()
+        {
+            string destinationFilePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Copy.txt";
+            File.Delete(destinationFilePath);
+        }
     }
 }
