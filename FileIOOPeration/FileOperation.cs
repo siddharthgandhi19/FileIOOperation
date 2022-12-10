@@ -32,5 +32,11 @@ namespace FileIOOperation
             string lines = File.ReadAllText(filePath);
             Console.WriteLine(lines);
         }
+        public static void CopyFile()
+        {
+            string filePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Operation.txt";
+            string destinationFilePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Copy.txt";
+            File.Copy(filePath, destinationFilePath, true);
+        }
     }
 }
