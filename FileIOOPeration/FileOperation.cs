@@ -16,5 +16,15 @@ namespace FileIOOperation
             else
                 Console.WriteLine("File Path Doesnt Exists");
         }
+
+        public static void ReadAllFiles()
+        {
+            string filePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Operation.txt";
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (var data in lines)
+            {
+                Console.WriteLine(data);
+            }
+        }
     }
 }
