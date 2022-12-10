@@ -11,7 +11,7 @@ namespace FileIOOperation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader");
+                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader\n 7. Write Using StreamWriter");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -34,6 +34,9 @@ namespace FileIOOperation
                         break;
                     case 6:
                         FileOperation.ReadFromStreamReader();
+                        break;
+                    case 7:
+                        FileOperation.WriteUsingStreamWriter();
                         break;
                     default:
                         flag = false;

@@ -54,7 +54,17 @@ namespace FileIOOperation
                     Console.WriteLine(s);
                 }
             }
-            Console.ReadKey();
+        }
+        public static void WriteUsingStreamWriter()
+        {
+            string filePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Operation.txt";
+            using (StreamWriter sr = File.AppendText(filePath))
+            {
+                sr.WriteLine("\nThanks");
+                sr.Close();
+
+                Console.WriteLine(File.ReadAllText(filePath));
+            }
         }
     }
 }
