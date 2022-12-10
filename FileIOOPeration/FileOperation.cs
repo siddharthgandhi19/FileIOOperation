@@ -43,5 +43,18 @@ namespace FileIOOperation
             string destinationFilePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Copy.txt";
             File.Delete(destinationFilePath);
         }
+        public static void ReadFromStreamReader()
+        {
+            string filePath = @"E:\Bridgelabz\FileIOOperation\FileIOOPeration\Operation.txt";
+            using (StreamReader sr = File.OpenText(filePath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.ReadKey();
+        }
     }
 }
